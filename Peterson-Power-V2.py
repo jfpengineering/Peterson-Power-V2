@@ -4,8 +4,8 @@ from time import sleep
 
 # Installing termcolor package
 os.system('sudo apt install -y python3')
-os.system('sudo apt install -y python3-pip')
-os.system('pip3 install termcolor')
+os.system('sudo apt install -y python-pip')
+os.system('pip install termcolor')
 os.system('clear')
 
 # Importing termcolor
@@ -20,15 +20,15 @@ print_green("|	PETERSON POWER V2	|")
 print_green("---------------------------------")
 
 # Print statement, sleep for 1.5 seconds, and then run the command
-print_green("\nEditing where updates are installed from\n")
+print_green("\nEditing where updates are installed from")
 sleep(1.5)
-os.system('cp "sources.list" "/etc/apt/sources.list"')
+os.system('sudo cp "sources.list" "/etc/apt/sources.list"')
 print_green("\nUpdating repositories\n")
 sleep(1.5)
-os.system('sudo apt update')
+os.system('sudo apt update -y')
 print_green("\nUpgrading repositories\n")
 sleep(1.5)
-os.system('sudo apt upgrade')
+os.system('sudo apt upgrade -y')
 print_green("\nUpgrading Firefox to Latest Version\n")
 sleep(1.5)
 os.system('sudo apt install -y firefox')
