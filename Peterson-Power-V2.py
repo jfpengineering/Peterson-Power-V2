@@ -3,9 +3,12 @@ import os
 from time import sleep
 
 # Installing termcolor package
-os.system('sudo apt install -y python3')
+os.system("echo 'ENTER-PASSWORD' | sudo -S apt install -y python3")
+sleep(.1)
 os.system('sudo apt install -y python-pip')
+sleep(.1)
 os.system('pip install termcolor')
+sleep(.1)
 os.system('clear')
 
 # Importing termcolor
@@ -32,3 +35,17 @@ os.system('sudo apt upgrade -y')
 print_green("\nUpgrading Firefox to Latest Version\n")
 sleep(1.5)
 os.system('sudo apt install -y firefox')
+print_green("\nDisabling the Root Account\n")
+sleep(1.5)
+os.system("echo -e '0000\n0000' | sudo passwd root")
+sleep(.1)
+os.system('sudo passwd -l root')
+print_green("\nEnabling and Configuring the Firewall\n")
+sleep(1.5)
+os.system('sudo apt install -y ufw')
+sleep(.1)
+os.system('sudo ufw enable')
+sleep(.1)
+os.system('sudo ufw default reject incoming')
+sleep(.1)
+os.system('sudo ufw default allow outgoing')
