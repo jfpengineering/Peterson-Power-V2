@@ -5,6 +5,8 @@ from time import sleep
 # Installing termcolor package
 os.system("echo 'ENTER-PASSWORD' | sudo -S apt install -y python-termcolor")
 sleep(.1)
+os.system('sudo apt install -y python3-termcolor')
+sleep(.1)
 os.system('clear')
 
 # Importing termcolor
